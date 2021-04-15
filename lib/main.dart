@@ -59,21 +59,23 @@ class MyApp extends StatelessWidget {
                           color: Colors.deepOrange,
                           borderRadius: BorderRadius.circular(18.0),
                         ),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Login()));
-                          },
-                          child: Center(
-                              child: Text(
-                            'Register',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold),
-                          )),
+                        child: Builder(builder:
+                        (context) =>
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) => Register()));
+                              },
+                              child: Center(
+                                  child: Text(
+                                    'Register',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                              ),
+                            ),
                         ),
                       ),
                       SizedBox(
